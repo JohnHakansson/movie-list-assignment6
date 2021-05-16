@@ -19,7 +19,12 @@ export default function Movie(props) {
         alt="delete"
       />
       {stars.map((item) => (
-        <img key={item} src={starImg} className="float-end" alt="star" />
+        <img
+          key={item.valueOf()}
+          src={starImg}
+          className="float-end"
+          alt="star"
+        />
       ))}
     </li>
   );

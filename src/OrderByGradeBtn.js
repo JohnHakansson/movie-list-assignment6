@@ -2,9 +2,10 @@ import React from "react";
 
 export default function OrderByGradeBtn(props) {
   const orderByGrade = () => {
-    props.movies.sort((a, b) => b.grade.localeCompare(a.grade));
-    props.setMovies(props.movies.filter((movie) => movie.id !== "1"));
-    console.log(props.movies);
+    const sortedMovies = [...props.movies].sort((a, b) =>
+      b.grade.localeCompare(a.grade)
+    );
+    props.setMovies(sortedMovies);
   };
 
   return (

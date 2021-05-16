@@ -19,12 +19,12 @@ export default function AddMovieForm(props) {
       alert("Du måste ange ett betyg för att kunna spara filmen");
       return false;
     }
-    const highestId = movies.length > 0 ? movies[movies.length - 1].id + 1 : 1;
+    const newId = movies.length > 0 ? movies[movies.length - 1].id + 1 : 1;
 
     props.setMovies([
       ...movies,
       {
-        id: highestId,
+        id: newId,
         title: titleRef.current.value,
         grade: gradeRef.current.value,
       },
